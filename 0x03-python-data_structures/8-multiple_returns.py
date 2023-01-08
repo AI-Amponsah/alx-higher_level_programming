@@ -2,5 +2,5 @@
 def multiple_returns(sentence):
     length = len(sentence)
     char = sentence[0] if length > 0 else "None"
-    tuple_a = length, char
+    tuple_a = (length, char)
     return tuple_a
