@@ -6,9 +6,9 @@ def print_argv(argv):
         return
     else:
         if num == 1:
-            print("{:d} argument.".format(num))
+            print("{:d} argument:".format(num))
         else:
-            print("{:d} arguments.".format(num))
+            print("{:d} arguments:".format(num))
         i = 1
 
         while i <= num:
