@@ -3,6 +3,7 @@ def print_argv(argv):
     num = len(argv) - 1
     if num == 0:
         print("{:d} argument.".format(num))
+        return
     else:
         if num == 1:
             print("{:d} argument.".format(num))
