@@ -12,7 +12,7 @@ def print_argv(argv):
         i = 1
 
         while i <= num:
-            print("{:d}: {:s} argument.".format(i, argv[i]))
+            print("{:d}: {:s}".format(i, argv[i]))
             i = i + 1
 
 
