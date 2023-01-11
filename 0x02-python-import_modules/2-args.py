@@ -13,7 +13,7 @@ def print_argv(argv):
 
         while i <= num:
             print("{:d}: {:s}".format(i, argv[i]))
-            i = i + 1
+            i +=  1
 
 
 if __name__ == "__main__":
