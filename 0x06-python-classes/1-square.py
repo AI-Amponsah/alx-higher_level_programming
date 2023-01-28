@@ -3,12 +3,12 @@
 
 
 class Square:
-""" A class Square"""
+    """ A class Square"""
 
-    def __init__(self, size)i:
-    """Initialize a square
+    def __init__(self, size):
+        """Initialize a square
 
-    Aregument:
-    int(size): Represents size of square
-               """
+        Aregument:
+        int(size): Represents size of square
+        """
         self.__size = size
