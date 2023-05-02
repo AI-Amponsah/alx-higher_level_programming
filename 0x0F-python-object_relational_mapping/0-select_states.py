@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-
-""" This scripts prints states from a DB"""
+""" a script that lists all states from the database hbtn_0e_0_usa """
 import MySQLdb
-
-from sys import argv
+import sys
 
 if __name__ == "__main__":
-	conn_db = MySQLdb.connect( user = argv[1], passwd = argv[2], port = 3306, database = argv[3])
-	cursor = conn_db.cursor()
-	cursor.execute("SELECT * FROM states")
-	result = cursor.fetchall()
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states")
+    states = cursor.fetchall()
 
-	for states in result:
-		print(states)
-	cursor.close()
-	conn_db.close()
+    for state in states:
+        print(state)
+
+    cursor.close()
+    db.close()
