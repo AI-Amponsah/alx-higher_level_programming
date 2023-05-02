@@ -9,9 +9,9 @@ if __name__ == "__main__":
 	conn_db = MySQLdb.connect( user = argv[1], passwd = argv[2], port = 3306, database = argv[3])
 	cursor = conn_db.cursor()
 	cursor.execute("SELECT * FROM states")
-	result = cursor.fetchall()
+	states = cursor.fetchall()
 
-	for states in result:
-		print(states)
+	for state in states:
+		print(state)
 	cursor.close()
 	conn_db.close()
