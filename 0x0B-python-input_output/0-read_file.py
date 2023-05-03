@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Module to create a function: read_file """
+"""function that reads a text file (UTF8) and prints it to stdout:"""
 
 
 def read_file(filename=""):
-    """ reads a text file (UTF8) and prints it to stdout """
+"""Reading a file"""
 
     with open(filename, encoding="utf-8") as f:
         print(f.read(), end='')
