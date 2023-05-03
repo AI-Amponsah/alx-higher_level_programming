@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton
+#!/usr/bin/python
 """function that returns the JSON representation
    of an object (string):
 """
