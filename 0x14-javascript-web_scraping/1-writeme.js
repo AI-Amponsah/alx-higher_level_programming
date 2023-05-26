@@ -1,21 +1,13 @@
+#!/usr/bin/node
+// a script that writes data to a file
 const fs = require('fs');
 
-function writeStringToFile(filePath, content) {
-  fs.writeFile(filePath, content, { encoding: 'utf-8' }, (err) => {
-    if (err) {
-      console.error('Error occurred while writing to file:', err);
-    } else {
-      console.log('String written to file successfully.');
-    }
-  });
-}
+// file path
+const file = process.argv[2];
 
-// Check if the script has received the correct number of arguments
-if (process.argv.length !== 4) {
-  console.log('Usage: node script.js <file_path> <content>');
-} else {
-  const filePath = process.argv[2];
-  const content = process.argv[3];
-  writeStringToFile(filePath, content);
-}
-
+// write to file
+fs.writeFile(file, process.argv[3], { flag: 'w' }, (err) => {
+  if (err) {
+    console.log(err);
+  }
+});
